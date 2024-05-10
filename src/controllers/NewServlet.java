@@ -32,8 +32,8 @@ public class NewServlet extends HttpServlet {
         // CSRF対策
         request.setAttribute("_token", request.getSession().getId());
 
-        // おまじないとしてのインスタンスを生成
-        request.setAttribute("Task", new Task());
+        // TODO:おまじないとしてのインスタンスを生成
+        request.setAttribute("task", new Task());
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tasks/new.jsp");
         rd.forward(request, response);
